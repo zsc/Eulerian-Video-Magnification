@@ -77,7 +77,7 @@ while True:
     for i in [leveln-1, 0]:
         filtered[i] = np.zeros(filtered[i].shape)
 
-    for i in xrange(leveln-2,0,-1):
+    for i in range(leveln-2,0,-1):
         currAlpha = lambda_vid/delta/8 - 1
         currAlpha = currAlpha * exaggeration_factor
         filtered[i] = (alpha if currAlpha > alpha else currAlpha) * filtered[i]

@@ -15,7 +15,7 @@ function make_video {
 }
 
 function make_frames {
-	python -u "$FILTER_TYPE.py" "input/$INPUT_VIDEO" $MAGNIFICATION
+	python3 -u "$FILTER_TYPE.py" "input/$INPUT_VIDEO" $MAGNIFICATION
 	# -u => unbuffered input and output
 }
 

@@ -61,7 +61,7 @@ def show_image(image, window_name='test'):
 
 def build_lappyr(img, leveln=6, dtype=np.int16):
     levels = []
-    for i in xrange(leveln-1):
+    for i in range(leveln-1):
         next_img = cv2.pyrDown(img)
         img1 = cv2.pyrUp(next_img, dstsize=getsize(img))
         levels.append(img-img1)
@@ -82,8 +82,8 @@ def make_grayscale_pixel(r,g,b):
 def make_grayscale(frame):
     w, h = len(frame[0]), len(frame)
     result = np.zeros([h, w])
-    for x in xrange(w):
-        for y in xrange(h):
+    for x in range(w):
+        for y in range(h):
             rgb = frame[y][x]
             result[y][x] = make_grayscale_pixel(*rgb)
     return result
